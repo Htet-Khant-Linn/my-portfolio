@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Htet Khant Linn | Data Analyst Portfolio
 
-# Run and deploy your AI Studio app
+A minimalist, high-performance professional portfolio website built for Data Analysts and Statistics & Data Science professionals. Designed with a focus on typography, whitespace, and clear information hierarchy.
 
-This contains everything you need to run your app locally.
+## 🚀 Built With
 
-View your app in AI Studio: https://ai.studio/apps/db9e3255-b24b-402e-bd6a-311bfd69151d
+- **React 18** - UI components & state management
+- **Vite** - Lightning-fast build tool and development server
+- **Tailwind CSS** - Modern utility-first styling
+- **Framer Motion** - Fluid layout animations and transitions (motion/react)
+- **Lucide React** - Clean and consistent iconography
+- **TypeScript** - Type-safe development
 
-## Run Locally
+## ✨ Key Features
 
-**Prerequisites:**  Node.js
+- **Minimalist Aesthetic**: High-contrast, clean design that prioritizes content readability.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
+- **Dynamic Content**: Data-driven architecture using `src/portfolioData.ts` for easy maintenance.
+- **Automated Deployment**: Ready-to-use GitHub Actions workflow for seamless CI/CD to GitHub Pages.
 
+## 🛠️ Usage & Customization
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **Modify Portfolio Data**:
+   Open `src/portfolioData.ts` and update the content with your personal information, experience, and projects.
+
+2. **Update Profile Photo**:
+   Place your photo in the `public/` directory and update the `profileImage` path in `src/portfolioData.ts`.
+
+3. **Run Locally**:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+4. **Deploying to GitHub Pages**:
+   - Push this repository to GitHub.
+   - Go to **Settings > Pages**.
+   - Select **GitHub Actions** as the source for your build and deployment.
+   - The included workflow in `.github/workflows/deploy.yml` will handle the rest.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
