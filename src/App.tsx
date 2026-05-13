@@ -33,7 +33,7 @@ export default function App() {
           <div className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">
             <a href={`mailto:${profile.email}`} className="hover:text-black transition-colors underline underline-offset-8 decoration-gray-200">{profile.email}</a>
           </div>
-          <p className="text-xl lg:text-2xl leading-relaxed text-gray-500 mb-12 max-w-2xl font-light">
+          <p className="text-xl lg:text-2xl leading-relaxed text-gray-700 mb-12 max-w-2xl font-light">
             {profile.about}
           </p>
           <div className="flex gap-8">
@@ -72,7 +72,7 @@ export default function App() {
                   <div className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-6">
                     <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{exp.company}</a>
                   </div>
-                  <ul className="space-y-3 text-gray-500 max-w-2xl">
+                  <ul className="space-y-3 text-gray-700 max-w-2xl">
                     {exp.description.map((desc, i) => (
                       <li key={i} className="leading-relaxed font-light">{desc}</li>
                     ))}
@@ -106,7 +106,7 @@ export default function App() {
                       <a href={edu.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{edu.degree}</a>
                     ) : edu.degree}
                   </div>
-                  {edu.subDegree && <div className="text-gray-500 font-light">{edu.subDegree}</div>}
+                  {edu.subDegree && <div className="text-gray-700 font-light">{edu.subDegree}</div>}
                 </div>
               </motion.div>
             ))}
@@ -132,7 +132,7 @@ export default function App() {
               <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-8">Languages</h3>
               <ul className="space-y-4">
                 {skills.languages.map((lang, idx) => (
-                  <li key={idx} className="flex items-center text-gray-500 font-light text-lg">
+                  <li key={idx} className="flex items-center text-gray-700 font-light text-lg">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-200 mr-4" />
                     {lang}
                   </li>
@@ -143,7 +143,7 @@ export default function App() {
               <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-8">Certifications</h3>
               <ul className="group space-y-6">
                 {skills.certifications.map((cert, idx) => (
-                  <li key={idx} className="flex items-start text-gray-500 font-light">
+                  <li key={idx} className="flex items-start text-gray-700 font-light">
                     {cert.url ? (
                       <a href={cert.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors flex items-center group/item">
                         <span className="text-lg">{cert.name}</span>
@@ -164,7 +164,7 @@ export default function App() {
           <ul className="space-y-10 group">
             {awards.map((award, idx) => (
               <li key={idx} className="max-w-3xl border-b border-gray-50 pb-8 hover:border-black transition-all duration-500">
-                <span className="text-gray-500 text-xl font-light leading-relaxed">
+                <span className="text-gray-700 text-xl font-light leading-relaxed">
                   {award.url ? (
                     <a href={award.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors inline-flex items-center">
                       {award.title}
@@ -192,7 +192,7 @@ export default function App() {
                   <div className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-6">
                     <a href={vol.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{vol.organization}</a>
                   </div>
-                  <p className="text-gray-500 leading-relaxed font-light text-lg max-w-2xl">{vol.description}</p>
+                  <p className="text-gray-700 leading-relaxed font-light text-lg max-w-2xl">{vol.description}</p>
                 </div>
               </div>
             ))}
