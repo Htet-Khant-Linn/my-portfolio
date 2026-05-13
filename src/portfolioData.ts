@@ -1,10 +1,84 @@
-export const portfolioData = {
+export interface Social {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+export interface Experience {
+  role: string;
+  company: string;
+  companyUrl: string;
+  period: string;
+  description: string[];
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  subDegree?: string;
+  url?: string;
+}
+
+export interface Tool {
+  name: string;
+  icon: string;
+}
+
+export interface Certification {
+  name: string;
+  url: string;
+}
+
+export interface Award {
+  title: string;
+  url?: string;
+}
+
+export interface Volunteering {
+  role: string;
+  organization: string;
+  url: string;
+  period: string;
+  description: string;
+}
+
+export interface Link {
+  title: string;
+  url: string;
+}
+
+export interface PortfolioData {
+  profile: {
+    firstName: string;
+    lastName: string;
+    title: string;
+    email: string;
+    profileImage: string;
+    about: string;
+    socials: Social[];
+  };
+  experience: Experience[];
+  education: Education[];
+  skills: {
+    tools: Tool[];
+    languages: string[];
+    certifications: Certification[];
+  };
+  interests: string;
+  awards: Award[];
+  volunteering: Volunteering[];
+  blogs: Link[];
+  interviews: Link[];
+}
+
+export const portfolioData: PortfolioData = {
   profile: {
     firstName: "Htet Khant",
     lastName: "Linn",
     title: "Data Analyst",
     email: "htetkhantlinn123@gmail.com",
-    profileImage: "/my-photo-1.jpg",
+    profileImage: "my-photo-1.jpg",
     about: "Dedicated Data Analyst and Statistics & Data Science student with a strong track record of transforming complex datasets into actionable insights. Proficient in statistical programming (Python, R), SQL, and advanced data visualization techniques. Proven experience building automated data pipelines, developing database solutions, and creating dashboards to optimize operational workflows, reduce errors, and drive data-driven decision-making for stakeholders.",
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/htet-khant-linn/", icon: "linkedin" },

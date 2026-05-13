@@ -4,6 +4,7 @@ import { LucideProps } from "lucide-react";
 interface IconProps extends LucideProps {
   name: string;
   className?: string;
+  strokeWidth?: number;
 }
 
 export default function Icon({ name, className, ...props }: IconProps) {
