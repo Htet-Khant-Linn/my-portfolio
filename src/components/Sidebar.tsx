@@ -3,19 +3,21 @@ import * as LucideIcons from "lucide-react";
 import { portfolioData } from "../portfolioData";
 
 export default function Sidebar() {
-  const { profile, blogs, interviews } = portfolioData;
+  const { profile, projects, blogs, interviews } = portfolioData;
 
   const menuItems = [
     { name: "About", id: "about" },
-    { name: "Experience", id: "experience" },
-    { name: "Education", id: "education" },
     { name: "Skills", id: "skills" },
-    { name: "Interests", id: "interests" },
-    { name: "Awards", id: "awards" },
+    { ...(projects.length > 0 ? { name: "Projects", id: "projects" } : {}) },
+    { name: "Education", id: "education" },
+    { name: "Experience", id: "experience" },
     { name: "Volunteer", id: "volunteering" },
+    { name: "Awards", id: "awards" },
+    { name: "Certifications", id: "certifications" },
+    { name: "Interests", id: "interests" },
     ...(blogs.length > 0 ? [{ name: "Blogs", id: "blogs" }] : []),
     ...(interviews.length > 0 ? [{ name: "Interviews", id: "interviews" }] : []),
-  ];
+  ].filter(item => item.id); // Filter out empty objects if projects is empty
 
   return (
     <nav className="lg:fixed lg:w-64 lg:h-screen bg-white border-r border-gray-100 flex flex-col pt-16 z-50">

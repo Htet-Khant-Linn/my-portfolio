@@ -48,6 +48,14 @@ export interface Link {
   url: string;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  url?: string;
+  tags?: string[];
+  image?: string;
+}
+
 export interface PortfolioData {
   profile: {
     firstName: string;
@@ -68,6 +76,7 @@ export interface PortfolioData {
   interests: string;
   awards: Award[];
   volunteering: Volunteering[];
+  projects: Project[];
   blogs: Link[];
   interviews: Link[];
 }
@@ -82,7 +91,7 @@ export const portfolioData: PortfolioData = {
     about: "Dedicated Data Analyst and Statistics & Data Science student with a strong track record of transforming complex datasets into actionable insights. Proficient in statistical programming (Python, R), SQL, and advanced data visualization techniques. Proven experience building automated data pipelines, developing database solutions, and creating dashboards to optimize operational workflows, reduce errors, and drive data-driven decision-making for stakeholders.",
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/htet-khant-linn/", icon: "linkedin" },
-      { name: "GitHub", url: "https://github.com/htetkhantlinn", icon: "github" },
+      { name: "GitHub", url: "https://github.com/Htet-Khant-Linn", icon: "github" },
       { name: "Website", url: "#", icon: "globe" },
     ],
   },
@@ -90,7 +99,7 @@ export const portfolioData: PortfolioData = {
     {
       role: "M&E Assistant",
       company: "Impact Hub Yangon",
-      companyUrl: "#",
+      companyUrl: "https://mm.linkedin.com/company/impact-hub-yangon-myanmar",
       period: "June 2025 - April 2026",
       description: [
         "Analyzed complex project datasets using statistical methods to prepare comprehensive reports and visual data insights, directly informing stakeholder decision-making.",
@@ -103,7 +112,7 @@ export const portfolioData: PortfolioData = {
     {
       role: "Program Assistant",
       company: "Google Career Certificate Program | Parami University",
-      companyUrl: "#",
+      companyUrl: "https://www.parami.edu.mm/",
       period: "November 2023 - June 2024",
       description: [
         "Coordinated program activities and managed participant data to track progress and enhance operational efficiencies.",
@@ -123,7 +132,7 @@ export const portfolioData: PortfolioData = {
   education: [
     {
       institution: "Parami University - Bard College",
-      degree: "Bachelor of Arts in Statistics and Data Science (SDS) - Dual Degrees",
+      degree: "Bachelor of Arts in Statistics and Data Science (SDS) - Bard Global Degree",
       period: "Expected Graduation: June 2027",
       subDegree: "New York, United States | GPA: 3.92/4.0"
     },
@@ -136,23 +145,32 @@ export const portfolioData: PortfolioData = {
   ],
   skills: {
     tools: [
-      { name: "SQL", icon: "database" },
       { name: "Python", icon: "code" },
+      { name: "SQL", icon: "database" },
       { name: "R", icon: "terminal" },
       { name: "Machine Learning", icon: "cpu" },
-      { name: "Power BI", icon: "bar-chart" },
+      { name: "Power BI", icon: "chart-bar-big" },
       { name: "Excel/Sheets", icon: "table" },
       { name: "Google Workspace", icon: "layers" },
       { name: "Office 365", icon: "briefcase" },
+      { name: "KoboToolbox", icon: "clipboard-type" }
     ],
     languages: ["Burmese (Native)", "English (C1 Advanced)", "Japanese (N4)"],
     certifications: [
-      { name: "Microsoft Business Analyst Professional Certificate", url: "#" },
-      { name: "Storytelling with Statistics Course | Open Society University Network", url: "#" },
-      { name: "Google Advanced Data Analysis Certificate | Coursera", url: "#" },
-      { name: "Associate Data Engineering | DataCamp", url: "#" },
-      { name: "Data Literacy Certification | DataCamp", url: "#" },
-      { name: "Google Project Management Professional Certificate | Coursera", url: "#" }
+      { name: "Undergraduate Certificate in Entrepreneurship | University of the People (February 2026)", url: "https://www.dropbox.com/scl/fi/1qhfc8iebc62fl591mjdf/2026-02_Certificate-in-Entrepreneurship.pdf?rlkey=32vwtdy9uyjqwd1tot5c26fzd&st=7rs0bf79&dl=0" },
+      { name: "Building Applications with OOP | DataCamp (January 2026) ", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/03128911d81fa3bee27870407d531400abab2f4b" },
+      { name: "GIS Application in Environmental Management | Open Society University Network (August 2025)", url: "https://www.dropbox.com/scl/fi/xl49vkebfelavq6w1klb3/OSUN_Course_GIS_Application_in_Environmental_Management_Linn.pdf?rlkey=cb305h2zzp02o9nypd6hzaxsp&st=wjy38ro4&dl=0" },
+      { name: "Undergraduate Certificate in Marketing | University of the People (June 2025)", url: "https://www.dropbox.com/scl/fi/dmchxuixepd9e5ivm8o7d/2025-06_Certificate-in-Marketing.pdf?rlkey=h2jl8abgpg3w02yefbmxo3w06&st=ft0k1als&dl=0" },
+      { name: "Undergraduate Certificate in Accounting | University of the People (June 2025)", url: "https://www.dropbox.com/scl/fi/r7l0ftgr8w2ei9hl43aoc/2025-06_Certificate-in-Accounting.pdf?rlkey=5wd2435wztt6l795if7pw4hbc&st=q96nhex5&dl=0" },
+      { name: "Storytelling with Statistics Course | Open Society University Network (June 2025)", url: "https://www.dropbox.com/scl/fi/koxw3rifzvh76u5exqyls/OSUN_Course_Storytelling_with_Statistics_Linn.pdf?rlkey=erghowdg7sats87a9bw4temti&st=17oarlrx&dl=0" },
+      { name: "Microsoft Business Analyst Professional Certificate | Coursera (May 2025)", url: "https://www.coursera.org/account/accomplishments/professional-cert/JD8GB0LH6SS1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" },      
+      { name: "European Union Law and Human Rights Course | Open Society University Network (March 2025)", url: "https://www.dropbox.com/scl/fi/piqg85ozlatz6pnqu0da3/OSUN_Course_European_Union_Law_and_Human_Rights_Linn.pdf?rlkey=jd3jk65pdsjp3tjljv7lhy4yf&st=b96az2gi&dl=0" },
+      { name: "Google Advanced Data Analysis Certificate | Coursera (January 2025)", url: "https://coursera.org/share/8104de0c21fecc3b4317f38021631794" },
+      { name: "Associate Data Engineering | DataCamp (December 2024) ", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/a797d14fd3cb56f41fb0fbc71e3aba5e954966d9" },
+      { name: "Data Literacy Certification | DataCamp (August 2024)", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/edfffbceccf8ba6c4c00845fb1849d2120050132" },
+      { name: "Google Project Management Professional Certificate | Coursera (July 2024)", url: "https://coursera.org/share/40425f8c7d1c2cb37e7700097947d44f" },
+      { name: "Academic and Research Skills Workshop | Parami University (June – August 2024)", url: "#" },
+      { name: "Ethical Leadership Network Collaborative Course | Open Society University Network (June 2024)", url: "#" },
     ]
   },
   interests: "Playing guitar and watching YouTube to learn new things. Proficient in computer literacy.",
@@ -172,14 +190,14 @@ export const portfolioData: PortfolioData = {
     {
       role: "Data Specialist",
       organization: "African NGO - Inkululeko | Parami University's Service-Learning Program",
-      url: "#",
+      url: "https://www.inkululeko.org/",
       period: "February 2025 - April 2025",
       description: "Designed and administered comprehensive student information databases in Google Sheets to track and manage participant data. Utilized advanced Excel functions to analyze datasets and formulate data-driven reports."
     },
     {
       role: "Mentor",
       organization: "Higher Education Access Program (HEAP) | USAID",
-      url: "#",
+      url: "https://www.parami.edu.mm/post/introducing-new-program-higher-education-access-program",
       period: "January 2025 - May 2025",
       description: "Oversaw student progress data to provide targeted guidance and support to mentees navigating the higher education application process. Facilitated workshops on essay writing and time management."
     },
@@ -189,6 +207,20 @@ export const portfolioData: PortfolioData = {
       url: "#",
       period: "April 2024",
       description: "Managed project timelines, deliverables, and team execution for cultural exchange initiatives, ensuring alignment with data-driven goals and objectives."
+    }
+  ],
+  projects: [
+    {
+      title: "Gemini-Powered YouTube Summarizer",
+      description: "A web-based application that leverages the power of Google's Gemini AI to generate comprehensive, well-formatted summaries of any YouTube video instantly.",
+      url: "https://github.com/Htet-Khant-Linn/gemini-powered-youtube-summarizer.git",
+      tags: ["HTML", "Python", "CSS", "Dockerfile", "Google Cloud Run", "Flask", "Google GenAI SDK"]
+    },
+    {
+      title: " Cat-Dog Image Segmentation using U-Net with MobileNet Backbone",
+      description: "This project was developed as the final submission for the WAI Practical Machine Learning course by Team ML_Heros. It focuses on semantic segmentation to distinguish between cats and dogs in images. A U-Net model with a MobileNet encoder is trained on a custom dataset annotated using LabelMe. The trained model is served via a FastAPI REST API, allowing users to upload images and receive segmentation masks overlaid on the original image. The project emphasizes the complete pipeline from data annotation and preprocessing to model training, inference, and deployment.",
+      url: "http://github.com/ML-Summer-School-by-WAI/Practical-ML-by-WAI/tree/main/8_final_proj/ML_Heros",
+      tags: ["Python", "FastAPI", "TensorFlow", "U-Net", "MobileNet", "Segmentation", "Computer Vision", "LabelMe", "Docker", "Google Cloud Run", "OpenCV", "REST API"]
     }
   ],
   blogs: [],
