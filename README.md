@@ -43,4 +43,3 @@ A minimalist, high-performance professional portfolio website built for Data Ana
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
-

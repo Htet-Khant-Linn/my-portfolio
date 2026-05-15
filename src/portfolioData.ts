@@ -137,10 +137,22 @@ export const portfolioData: PortfolioData = {
       subDegree: "New York, United States | GPA: 3.92/4.0"
     },
     {
+      institution: "Parami University - Bard College",
+      degree: "Associate of Arts in Statistics and Data Science (SDS) - Bard Global Degree",
+      period: "Completed: June 2025",
+      subDegree: "New York, United States | GPA: 3.91/4.0"
+    },
+    {
       institution: "University of the People",
-      degree: "Bachelor's Degree in Business Administration",
+      degree: "Bachelor of Science in Business Administration",
       period: "Expected Graduation: July 2026",
       subDegree: "Pasadena, California, United States | Current CGPA: 3.85/4.0"
+    },
+    {
+      institution: "University of the People",
+      degree: "Associate of Science in Business Administration (with Honors)",
+      period: "Completed: December 2024",
+      subDegree: "Pasadena, California, United States | CGPA: 3.75/4.0"
     }
   ],
   skills: {
@@ -181,9 +193,16 @@ export const portfolioData: PortfolioData = {
   ],
   volunteering: [
     {
+      role: "Project Advisor",
+      organization: "The SDS Bridge Workshop Series at Parami University",
+      url: "https://www.linkedin.com/posts/htet-khant-linn_datascience-stemeducation-paramiuniversity-share-7455235327411134464-ddqy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADJTN7IBuH4Uz3To_1ZDGZZyC474lrtpNkU",
+      period: "April 2026",
+      description: "The SDS Bridge Workshop Series at Parami University was a three-session program designed to help students overcome initial fears about Data Science and build confidence in their first steps into the field. As Project Advisor & Tech Support, I managed registration, Zoom coordination, participant communications, and live session support, working alongside expert facilitators to make the series a success."
+    },
+    {
       role: "Data & Database Administrator",
       organization: "'Sar Phart Win' Civic Engagement Project",
-      url: "#",
+      url: "March 2026",
       period: "Recent",
       description: "Designed and built a relational student database in spreadsheets to accurately monitor attendance and track participant progress, accelerating administrative workflows."
     },
