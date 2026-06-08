@@ -8,8 +8,13 @@ interface IconProps extends LucideProps {
 }
 
 export default function Icon({ name, className, ...props }: IconProps) {
-  // Convert names like "linkedin" to "Linkedin"
-  const iconName = (name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()) as keyof typeof LucideIcons;
+  // Convert kebab-case names like "chart-bar-big" to PascalCase "ChartBarBig"
+  const formattedName = name
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
+
+  const iconName = formattedName as keyof typeof LucideIcons;
   const LucideIcon = (LucideIcons[iconName] as any) || LucideIcons.HelpCircle;
 
   return <LucideIcon className={className} {...(props as any)} />;

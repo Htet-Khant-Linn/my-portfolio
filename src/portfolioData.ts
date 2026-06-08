@@ -161,7 +161,7 @@ export const portfolioData: PortfolioData = {
       { name: "SQL", icon: "database" },
       { name: "R", icon: "terminal" },
       { name: "Machine Learning", icon: "cpu" },
-      { name: "Power BI", icon: "chart-bar-big" },
+      { name: "Tableau", icon: "chart-bar-big" },
       { name: "Excel/Sheets", icon: "table" },
       { name: "Google Workspace", icon: "layers" },
       { name: "Office 365", icon: "briefcase" },
@@ -169,6 +169,8 @@ export const portfolioData: PortfolioData = {
     ],
     languages: ["Burmese (Native)", "English (C1 Advanced)", "Japanese (N4)"],
     certifications: [
+      { name: "Artificial Intelligence in a Human World: Skills, Ethics & Impact | GHEA21 (June 2026)", url: "https://www.dropbox.com/scl/fi/bidcwvnhawacnitsfu06d/GHEA21_Online_Course_Artificial_Intelligence_in_a_Human_World_Skills-_Ethics_-_Impact_Linn.pdf?rlkey=5w84mqhtbebuz1zgrg9j612oz&st=hhyqwbbf&dl=0" },
+      { name: "Certificate in Mathematical Introduction to Data Analysis | Smolny Beyond Borders (June 2026)", url: "https://www.dropbox.com/scl/fi/d3odyhoamu6etin4fbn7z/SBB_Certificate_Mathematical_Introduction_to_Data_Analysis_Linn.pdf?rlkey=oi390an9hxf6k058h3re9kdy6&st=4e2wz0k9&dl=0" },
       { name: "Undergraduate Certificate in Entrepreneurship | University of the People (February 2026)", url: "https://www.dropbox.com/scl/fi/1qhfc8iebc62fl591mjdf/2026-02_Certificate-in-Entrepreneurship.pdf?rlkey=32vwtdy9uyjqwd1tot5c26fzd&st=7rs0bf79&dl=0" },
       { name: "Building Applications with OOP | DataCamp (January 2026) ", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/03128911d81fa3bee27870407d531400abab2f4b" },
       { name: "GIS Application in Environmental Management | Open Society University Network (August 2025)", url: "https://www.dropbox.com/scl/fi/xl49vkebfelavq6w1klb3/OSUN_Course_GIS_Application_in_Environmental_Management_Linn.pdf?rlkey=cb305h2zzp02o9nypd6hzaxsp&st=wjy38ro4&dl=0" },
