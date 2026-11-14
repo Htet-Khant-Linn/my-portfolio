@@ -1,1 +1,115 @@
 @import "tailwindcss";
+
+@theme {
+  --color-canvas: #f8fafc;
+  --color-heading: #182536;
+  --color-body: #37465a;
+  --color-muted: #5b6778;
+  --color-accent: #355675;
+  --color-accent-strong: #233e58;
+  --color-accent-soft: #eaf0f6;
+  --color-line: #d7dfe8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :where(h1, h2, h3, p, a, li) {
+    overflow-wrap: anywhere;
+  }
+
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-accent px-5 py-3 font-semibold text-white focus:translate-y-0;
+  }
+
+  .portfolio-section {
+    @apply border-t border-line pt-10 sm:pt-12;
+  }
+
+  .section-eyebrow {
+    @apply mb-4 block text-xs font-semibold uppercase tracking-[0.22em] text-accent;
+  }
+
+  .section-heading {
+    @apply mb-8 text-3xl font-bold leading-tight tracking-tight text-heading sm:text-4xl xl:text-5xl;
+    text-wrap: balance;
+  }
+
+  .portfolio-card {
+    @apply rounded-lg border border-line bg-white transition-[border-color,box-shadow] duration-200;
+    box-shadow: 0 2px 6px rgb(24 37 54 / 3%);
+  }
+
+  .portfolio-card:hover,
+  .portfolio-card:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 12px rgb(24 37 54 / 6%);
+  }
+
+  .skill-card {
+    @apply flex min-w-0 flex-col rounded-md border border-line bg-white p-5 transition-colors hover:border-accent;
+  }
+
+  .text-link {
+    @apply text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent-strong hover:decoration-accent;
+  }
+
+  .social-link {
+    @apply inline-flex size-11 items-center justify-center rounded-md border border-line bg-white text-accent transition-colors;
+  }
+
+  a.social-link:hover {
+    @apply border-accent bg-accent-soft text-accent-strong;
+  }
+
+  .icon-link {
+    @apply -mt-1 inline-flex size-11 shrink-0 items-center justify-center rounded-md bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white;
+  }
+
+  .certificate-link {
+    @apply flex w-full items-start gap-2 p-5 text-accent transition-colors hover:text-accent-strong sm:p-6;
+  }
+
+  .certificate-link:hover span {
+    @apply underline underline-offset-4;
+  }
+
+  .nav-link {
+    @apply block rounded-md border-l-2 border-transparent px-3 py-2.5 text-xs font-medium uppercase tracking-[0.12em] text-muted transition-colors hover:bg-accent-soft hover:text-accent;
+  }
+
+  .nav-link[aria-current="location"] {
+    @apply border-accent bg-accent-soft font-semibold text-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
