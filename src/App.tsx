@@ -37,16 +37,26 @@ export default function App() {
             {profile.about}
           </p>
           <div className="flex gap-8">
-            {profile.socials.map((social) => (
+            {profile.socials.map((social) => social.url ? (
               <a
                 key={social.name}
                 href={social.url}
+                aria-label={`Visit ${social.name} (opens in a new tab)`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-300 hover:text-black transition-colors duration-300"
               >
-                <Icon name={social.icon} size={18} strokeWidth={1.5} />
+                <Icon name={social.icon} size={18} strokeWidth={1.5} aria-hidden="true" />
               </a>
+            ) : (
+              <span
+                key={social.name}
+                role="img"
+                aria-label={`${social.name} (link unavailable)`}
+                className="text-gray-300 hover:text-black transition-colors duration-300"
+              >
+                <Icon name={social.icon} size={18} strokeWidth={1.5} aria-hidden="true" />
+              </span>
             ))}
           </div>
         </motion.section>
@@ -97,8 +107,8 @@ export default function App() {
                       <div className="flex justify-between items-start mb-8">
                         <h3 className="text-2xl font-bold text-black leading-tight">{project.title}</h3>
                         {project.url && (
-                          <a href={project.url} target="_blank" rel="noreferrer" className="text-gray-300 hover:text-black transition-colors">
-                            <Icon name="external-link" size={20} strokeWidth={1.5} />
+                          <a href={project.url} aria-label={`View ${project.title.trim()} (opens in a new tab)`} target="_blank" rel="noreferrer" className="text-gray-300 hover:text-black transition-colors">
+                            <Icon name="external-link" size={20} strokeWidth={1.5} aria-hidden="true" />
                           </a>
                         )}
                       </div>
@@ -169,7 +179,9 @@ export default function App() {
                 <div className="lg:col-span-9">
                   <h3 className="text-2xl font-bold text-black mb-1">{exp.role}</h3>
                   <div className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-6">
-                    <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{exp.company}</a>
+                    {exp.companyUrl ? (
+                      <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{exp.company}</a>
+                    ) : <span className="hover:text-black transition-colors">{exp.company}</span>}
                   </div>
                   <ul className="space-y-3 text-gray-700 max-w-2xl">
                     {exp.description.map((desc, i) => (
@@ -195,7 +207,9 @@ export default function App() {
                 <div className="lg:col-span-9">
                   <h3 className="text-2xl font-bold text-black mb-1">{vol.role}</h3>
                   <div className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-6">
-                    <a href={vol.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{vol.organization}</a>
+                    {vol.url ? (
+                      <a href={vol.url} target="_blank" rel="noreferrer" className="hover:text-black transition-colors">{vol.organization}</a>
+                    ) : <span className="hover:text-black transition-colors">{vol.organization}</span>}
                   </div>
                   <p className="text-gray-700 leading-relaxed font-light text-lg max-w-2xl">{vol.description}</p>
                 </div>
@@ -244,7 +258,12 @@ export default function App() {
                       <span className="text-lg">{cert.name}</span>
                       <Icon name="arrow-up-right" size={14} className="ml-2 text-gray-200 group-hover/item:text-black transition-colors" />
                     </a>
-                  ) : <span className="text-lg">{cert.name}</span>}
+                  ) : (
+                    <span className="hover:text-black transition-colors flex items-center group/item">
+                      <span className="text-lg">{cert.name}</span>
+                      <Icon name="arrow-up-right" size={14} aria-hidden="true" className="ml-2 text-gray-200 group-hover/item:text-black transition-colors" />
+                    </span>
+                  )}
                 </motion.li>
               ))}
             </ul>

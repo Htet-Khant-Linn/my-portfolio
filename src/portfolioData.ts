@@ -1,13 +1,13 @@
 export interface Social {
   name: string;
-  url: string;
+  url?: string;
   icon: string;
 }
 
 export interface Experience {
   role: string;
   company: string;
-  companyUrl: string;
+  companyUrl?: string;
   period: string;
   description: string[];
 }
@@ -27,7 +27,7 @@ export interface Tool {
 
 export interface Certification {
   name: string;
-  url: string;
+  url?: string;
 }
 
 export interface Award {
@@ -38,7 +38,7 @@ export interface Award {
 export interface Volunteering {
   role: string;
   organization: string;
-  url: string;
+  url?: string;
   period: string;
   description: string;
 }
@@ -92,7 +92,7 @@ export const portfolioData: PortfolioData = {
     socials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/htet-khant-linn/", icon: "linkedin" },
       { name: "GitHub", url: "https://github.com/Htet-Khant-Linn", icon: "github" },
-      { name: "Website", url: "#", icon: "globe" },
+      { name: "Website", icon: "globe" }, // TODO: Add the website destination when available.
     ],
   },
   experience: [
@@ -122,7 +122,7 @@ export const portfolioData: PortfolioData = {
     {
       role: "Freelance Computer Trainer",
       company: "Independent",
-      companyUrl: "#",
+      // No company destination supplied for independent work.
       period: "December 2021 - November 2024",
       description: [
         "Trained individuals in technical tools including Microsoft Excel (functions, pivot tables, data prep) and Google Workspace to improve digital data literacy."
@@ -183,8 +183,8 @@ export const portfolioData: PortfolioData = {
       { name: "Associate Data Engineering | DataCamp (December 2024) ", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/a797d14fd3cb56f41fb0fbc71e3aba5e954966d9" },
       { name: "Data Literacy Certification | DataCamp (August 2024)", url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/edfffbceccf8ba6c4c00845fb1849d2120050132" },
       { name: "Google Project Management Professional Certificate | Coursera (July 2024)", url: "https://coursera.org/share/40425f8c7d1c2cb37e7700097947d44f" },
-      { name: "Academic and Research Skills Workshop | Parami University (June – August 2024)", url: "#" },
-      { name: "Ethical Leadership Network Collaborative Course | Open Society University Network (June 2024)", url: "#" },
+      { name: "Academic and Research Skills Workshop | Parami University (June – August 2024)" }, // TODO: Add certificate URL.
+      { name: "Ethical Leadership Network Collaborative Course | Open Society University Network (June 2024)" }, // TODO: Add certificate URL.
     ]
   },
   interests: "Playing guitar and watching YouTube to learn new things. Proficient in computer literacy.",
@@ -204,8 +204,8 @@ export const portfolioData: PortfolioData = {
     {
       role: "Data & Database Administrator",
       organization: "'Sar Phart Win' Civic Engagement Project",
-      url: "March 2026",
-      period: "Recent",
+      // TODO: Add the project destination when available.
+      period: "March 2026",
       description: "Designed and built a relational student database in spreadsheets to accurately monitor attendance and track participant progress, accelerating administrative workflows."
     },
     {
@@ -225,7 +225,7 @@ export const portfolioData: PortfolioData = {
     {
       role: "Project Manager & Graphic Designer",
       organization: "Yoe Yar | Civic Engagement Project",
-      url: "#",
+      // TODO: Add the project destination when available.
       period: "April 2024",
       description: "Managed project timelines, deliverables, and team execution for cultural exchange initiatives, ensuring alignment with data-driven goals and objectives."
     }
@@ -240,7 +240,7 @@ export const portfolioData: PortfolioData = {
     {
       title: " Cat-Dog Image Segmentation using U-Net with MobileNet Backbone",
       description: "This project was developed as the final submission for the WAI Practical Machine Learning course by Team ML_Heros. It focuses on semantic segmentation to distinguish between cats and dogs in images. A U-Net model with a MobileNet encoder is trained on a custom dataset annotated using LabelMe. The trained model is served via a FastAPI REST API, allowing users to upload images and receive segmentation masks overlaid on the original image. The project emphasizes the complete pipeline from data annotation and preprocessing to model training, inference, and deployment.",
-      url: "http://github.com/ML-Summer-School-by-WAI/Practical-ML-by-WAI/tree/main/8_final_proj/ML_Heros",
+      url: "https://github.com/ML-Summer-School-by-WAI/Practical-ML-by-WAI/tree/main/8_final_proj/ML_Heros",
       tags: ["Python", "FastAPI", "TensorFlow", "U-Net", "MobileNet", "Segmentation", "Computer Vision", "LabelMe", "Docker", "Google Cloud Run", "OpenCV", "REST API"]
     }
   ],

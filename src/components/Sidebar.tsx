@@ -1,26 +1,25 @@
 import { motion } from "motion/react";
-import * as LucideIcons from "lucide-react";
 import { portfolioData } from "../portfolioData";
 
 export default function Sidebar() {
-  const { profile, projects, blogs, interviews } = portfolioData;
+  const { profile, skills, projects, blogs, interviews } = portfolioData;
 
   const menuItems = [
     { name: "About", id: "about" },
     { name: "Skills", id: "skills" },
-    { ...(projects.length > 0 ? { name: "Projects", id: "projects" } : {}) },
+    ...(projects.length > 0 ? [{ name: "Projects", id: "projects" }] : []),
     { name: "Education", id: "education" },
     { name: "Experience", id: "experience" },
     { name: "Volunteer", id: "volunteering" },
     { name: "Awards", id: "awards" },
-    { name: "Certifications", id: "certifications" },
+    ...(skills.certifications.length > 0 ? [{ name: "Certifications", id: "certifications" }] : []),
     { name: "Interests", id: "interests" },
     ...(blogs.length > 0 ? [{ name: "Blogs", id: "blogs" }] : []),
     ...(interviews.length > 0 ? [{ name: "Interviews", id: "interviews" }] : []),
-  ].filter(item => item.id); // Filter out empty objects if projects is empty
+  ];
 
   return (
-    <nav className="lg:fixed lg:w-64 lg:h-screen bg-white border-r border-gray-100 flex flex-col pt-16 z-50">
+    <nav aria-label="Portfolio sections" className="lg:fixed lg:w-64 lg:h-screen bg-white border-r border-gray-100 flex flex-col pt-16 z-50">
       <div className="hidden lg:block mb-12 px-10">
         <motion.img
           initial={{ opacity: 0 }}

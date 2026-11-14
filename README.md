@@ -4,10 +4,10 @@ A minimalist, high-performance professional portfolio website built for Data Ana
 
 ## 🚀 Built With
 
-- **React 18** - UI components & state management
+- **React 19** - UI components and rendering
 - **Vite** - Lightning-fast build tool and development server
 - **Tailwind CSS** - Modern utility-first styling
-- **Framer Motion** - Fluid layout animations and transitions (motion/react)
+- **Motion** - Fluid layout animations and transitions (`motion/react`)
 - **Lucide React** - Clean and consistent iconography
 - **TypeScript** - Type-safe development
 
@@ -28,18 +28,55 @@ A minimalist, high-performance professional portfolio website built for Data Ana
 
 3. **Run Locally**:
    ```bash
-   npm install
+   npm ci
    npm run dev
    ```
 
-4. **Deploying to GitHub Pages**:
+   Use a Node.js version supported by the declared Vite plugins (Node 20.19+ or 22.12+). The development server uses port 3000; open `http://localhost:3000/my-portfolio/`. No API keys or environment variables are required. The Gemini summarizer listed in Projects is a separate linked project.
+
+4. **Check and Build**:
+   ```bash
+   npm run lint
+   npm run build
+   npm run preview
+   ```
+   `lint` runs the TypeScript check; it does not run ESLint. The build outputs static files to `dist/`. `npm run clean` removes `dist/` and any generated `server.js` using Node.js and works on Windows, macOS, and Linux.
+
+5. **Deploying to GitHub Pages**:
    - Push this repository to GitHub.
    - Go to **Settings > Pages**.
    - Select **GitHub Actions** as the source for your build and deployment.
-   - The included workflow in `.github/workflows/deploy.yml` will handle the rest.
+   - The workflow in `.github/workflows/deploy.yml` uses `npm ci`, checks TypeScript, builds, and deploys on pushes to `main` or manual runs.
+   - Vite's `base` is `/my-portfolio/`. Review it if the repository name or hosting location changes.
+
+## Project Structure
+
+- `src/portfolioData.ts`: typed portfolio content and links.
+- `src/App.tsx`: page sections, layout, and animations.
+- `src/components/Sidebar.tsx`: section navigation and profile photo.
+- `src/components/Icon.tsx`: Lucide icon rendering.
+- `src/index.css`: Tailwind CSS v4 entry point; the Vite plugin supplies integration without a separate Tailwind configuration file.
+- `public/`: static assets copied into the build.
+- `index.html`: page title, description, and social metadata.
+- `vite.config.ts`: build base path, plugins, and development settings.
+
+Navigation uses same-page anchors such as `#projects`; no routing library or backend is required. Projects, certifications, blogs, and interviews are displayed when their arrays contain entries.
+
+## Links Awaiting Destinations
+
+Missing destinations are omitted from the data and rendered without clickable links, while retaining their visible content:
+
+- Website social icon.
+- Independent freelance work company link.
+- Academic and Research Skills Workshop certificate.
+- Ethical Leadership Network Collaborative Course certificate.
+- Sar Phart Win civic engagement project (its misplaced date is now the period, March 2026).
+- Yoe Yar civic engagement project.
+
+Add an actual `url` or `companyUrl` when available; do not use `#` as a placeholder. Existing external destinations have not been checked for availability.
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+No license file is currently included. Add a license file before declaring a license for reuse.
 
 ---
