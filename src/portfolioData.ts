@@ -97,6 +97,28 @@ export const portfolioData: PortfolioData = {
   },
   experience: [
     {
+      role: "Business Analyst",
+      company: "ThitsaWorks",
+      companyUrl: "https://www.thitsaworks.com/",
+      period: "September 2026 - Present",
+      description: [
+        "Contribute to financial technology projects, focusing on:",
+        "Fraud Management System Integration: Analyze business requirements, design workflows, and support fraud detection system integration.",
+        "IISP Integration Processes: Coordinate API integration, system testing, and issue resolution across financial service providers.",
+        "Automation Pipelines: Develop and optimize automated workflows to improve operational efficiency.",
+        "Data Analysis & Reporting: Analyze transaction data, monitor system performance, and prepare reports to support data-driven decisions."
+      ]
+    },
+    {
+      role: "Business Analyst Associate Intern",
+      company: "ThitsaWorks",
+      companyUrl: "https://www.thitsaworks.com/",
+      period: "June - August 2026",
+      description: [
+        "Supported the integration of a Fraud Management System (FMS), focusing on business requirements analysis, technical documentation, system workflows, and coordination between stakeholders and technical teams."
+      ]
+    },
+    {
       role: "M&E Assistant",
       company: "Impact Hub Yangon",
       companyUrl: "https://mm.linkedin.com/company/impact-hub-yangon-myanmar",
@@ -145,14 +167,14 @@ export const portfolioData: PortfolioData = {
     {
       institution: "University of the People",
       degree: "Bachelor of Science in Business Administration",
-      period: "Expected Graduation: July 2026",
-      subDegree: "Pasadena, California, United States | Current CGPA: 3.85/4.0"
+      period: "Completed: June 2026",
+      subDegree: "Pasadena, California, United States | CGPA: 3.86/4.0 | Summa Cum Laude (Highest Honors)"
     },
     {
       institution: "University of the People",
-      degree: "Associate of Science in Business Administration (with Honors)",
+      degree: "Associate of Science in Business Administration",
       period: "Completed: December 2024",
-      subDegree: "Pasadena, California, United States | CGPA: 3.75/4.0"
+      subDegree: "Pasadena, California, United States | CGPA: 3.75/4.0 | Magna Cum Laude (High Honors)"
     }
   ],
   skills: {
@@ -232,6 +254,18 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      title: "Spaceship Titanic Prediction",
+      description: "A machine learning project using Kaggle's Spaceship Titanic dataset to predict whether passengers were transported to another dimension. Compared Logistic Regression and K-Nearest Neighbors using stratified 5-fold cross-validation, with pipelines for missing-value imputation, scaling, one-hot encoding, and feature selection. The tuned KNN model achieved 79.38% mean cross-validation accuracy. An interactive Streamlit app lets users enter passenger details for predictions and explore the training dataset.",
+      url: "https://github.com/Htet-Khant-Linn/spaceship-titanic-ml-app",
+      tags: ["Machine Learning", "Streamlit", "KNN", "Logistic Regression", "Data Preprocessing", "Feature Selection", "Cross-Validation"]
+    },
+    {
+      title: "Cisco Packet Tracer Campus Network Simulation",
+      description: "Designed and configured a campus network in Cisco Packet Tracer connecting three departmental LANs through two routers, switches, and Ethernet hubs. Implemented IPv4 addressing, /24 departmental subnets, a /30 router-to-router link, and static routing to enable communication across departments. The project demonstrates network topology design, Cisco IOS configuration, and connectivity troubleshooting.",
+      url: "https://github.com/Htet-Khant-Linn/cisco-packet-tracer-campus-network",
+      tags: ["Cisco Packet Tracer", "Cisco IOS CLI", "Networking", "IPv4", "Subnetting", "Static Routing", "Network Troubleshooting"]
+    },
+    {
       title: "Gemini-Powered YouTube Summarizer",
       description: "A web-based application that leverages the power of Google's Gemini AI to generate comprehensive, well-formatted summaries of any YouTube video instantly.",
       url: "https://github.com/Htet-Khant-Linn/gemini-powered-youtube-summarizer.git",
@@ -242,6 +276,48 @@ export const portfolioData: PortfolioData = {
       description: "This project was developed as the final submission for the WAI Practical Machine Learning course by Team ML_Heros. It focuses on semantic segmentation to distinguish between cats and dogs in images. A U-Net model with a MobileNet encoder is trained on a custom dataset annotated using LabelMe. The trained model is served via a FastAPI REST API, allowing users to upload images and receive segmentation masks overlaid on the original image. The project emphasizes the complete pipeline from data annotation and preprocessing to model training, inference, and deployment.",
       url: "https://github.com/ML-Summer-School-by-WAI/Practical-ML-by-WAI/tree/main/8_final_proj/ML_Heros",
       tags: ["Python", "FastAPI", "TensorFlow", "U-Net", "MobileNet", "Segmentation", "Computer Vision", "LabelMe", "Docker", "Google Cloud Run", "OpenCV", "REST API"]
+    },
+    {
+      title: "Benchmarking RNN, LSTM, and GRU for Oil Price Forecasting",
+      description: "A STAT 303 final project at Parami University comparing recurrent neural networks for next-day Brent and WTI crude oil price forecasting. Combined historical prices with financial and geopolitical indicators, prepared chronological training and test sets, and evaluated RNN, LSTM, and GRU models using RMSE, MAE, and MAPE. The Simple RNN performed best under the tested experimental setup.",
+      url: "https://github.com/Htet-Khant-Linn/STAT-303-Final-Project",
+      tags: ["Python", "TensorFlow", "Keras", "Time Series", "RNN", "LSTM", "GRU", "Data Visualization"]
+    },
+    {
+      title: "CareerPath AI",
+      description: "A personalized tech career roadmap generator powered by Google's Agent Development Kit and Gemini 2.5 Flash. Coordinates specialist agents to research skills, learning resources, portfolio projects, and market insights, then organizes the results into a tailored learning timeline. Uses a Google Cloud Run backend and an HTML frontend hosted on GitHub Pages.",
+      url: "https://github.com/Htet-Khant-Linn/careerpath-ai",
+      tags: ["Google ADK", "Gemini", "Multi-Agent Systems", "Google Vertex AI", "Google Cloud Run", "HTML", "GitHub Pages"]
+    },
+    {
+      title: "Analyzing the Popularity of Programming Languages",
+      description: "Analyzed Stack Overflow question data in R to explore programming language popularity. Used dplyr to identify the five most frequently discussed language tags from 2015 to 2020, calculated their shares of annual questions, and visualized trends with ggplot2.",
+      url: "https://github.com/Htet-Khant-Linn/Project-Analyze-the-Popularity-of-Programming-Languages",
+      tags: ["R", "dplyr", "ggplot2", "readr", "Data Analysis", "Data Visualization"]
+    },
+    {
+      title: "Visualizing the History of Nobel Prize Winners",
+      description: "A DataCamp project exploring Nobel Prize winners from 1901 to 2023 using Nobel Prize API data. Used Python, pandas, matplotlib, and seaborn to analyze and visualize historical trends across prize categories, including Chemistry, Literature, Physics, Physiology or Medicine, Economics, and Peace.",
+      url: "https://github.com/Htet-Khant-Linn/Project_Visualizing-the-History-of-Nobel-Prize-Winners",
+      tags: ["Python", "pandas", "Matplotlib", "seaborn", "Data Analysis", "Data Visualization"]
+    },
+    {
+      title: "Exploring London's Travel Network",
+      description: "A DataCamp SQL project exploring public transport usage in Greater London using Transport for London journey volume data. Analyzed monthly travel trends across transport modes, including the Underground, buses, trams, and DLR.",
+      url: "https://github.com/Htet-Khant-Linn/Project-Exploring-London-s-Travel-Network",
+      tags: ["SQL", "Data Analysis", "Public Transport", "Transport for London"]
+    },
+    {
+      title: "Exploring NYC Public School Test Result Scores",
+      description: "A DataCamp project analyzing SAT performance across New York City public high schools using Python and pandas. Identified schools with strong math scores, ranked the top ten schools by combined SAT results, and compared borough-level averages and score variation.",
+      url: "https://github.com/Htet-Khant-Linn/Project-Exploring-NYC-Public-School-Test-Result-Scores",
+      tags: ["Python", "pandas", "Data Analysis", "Education", "Descriptive Statistics"]
+    },
+    {
+      title: "Investigating Netflix Movies",
+      description: "A DataCamp exploratory data analysis project investigating movies released in the 1990s using Netflix catalog data. Filtered and analyzed records with pandas, visualized movie duration distributions with matplotlib, and counted action movies shorter than 90 minutes.",
+      url: "https://github.com/Htet-Khant-Linn/Project_Investigating_Netflix_Movies",
+      tags: ["Python", "pandas", "Matplotlib", "Exploratory Data Analysis", "Data Visualization"]
     }
   ],
   blogs: [],
